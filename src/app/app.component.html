@@ -1,4 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<form>
+
 <div class="chat_window">
   <div class="top_menu">
     <div class="buttons">
@@ -8,12 +10,12 @@
     </div>
     <div class="title">채팅</div>
   </div>
-  <ul class="messages"></ul>
+  <ul class="messages">{{sendmessage}}</ul>
   <div class="bottom_wrapper clearfix row">
     <div class="message_input_wrapper col-sm-8">
-      <input class="message_input" placeholder="메세지를 입력해주세요..." />
+      <input type="text" name="message" [(ngModel)]="message" class="message_input" placeholder="메세지를 입력해주세요..." />
     </div>
-    <div class="send_message col-sm-4">
+    <div class="send_message col-sm-4" (click)="sendMessage()">
       <div class="icon"></div><div class="text">보내기</div>
     </div>
   </div>
@@ -24,7 +26,9 @@
     </div>
     <div class="text_wrapper">
       <div class="text">
+			
       </div>
     </div>
   </li>
 </div>
+</form>
